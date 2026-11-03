@@ -1,0 +1,48 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%-- Set  <c:set var="navActive" value="zones"/>  in a page, before including this file, to highlight its link. --%>
+<header class="app-header">
+    <div class="glass nav-bar">
+        <a class="brand" href="${pageContext.request.contextPath}/home">
+            <span class="brand-mark">S</span>
+            SmartCity360
+        </a>
+
+        <nav class="nav-scroll" aria-label="Main">
+            <a class="nav-link line-home ${navActive == 'home' ? 'is-active' : ''}"
+               href="${pageContext.request.contextPath}/home"
+               aria-current="${navActive == 'home' ? 'page' : 'false'}">
+                <span class="nav-dot" aria-hidden="true">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+                </span>
+                Home
+            </a>
+            <a class="nav-link line-a ${navActive == 'streams' ? 'is-active' : ''}"
+               href="${pageContext.request.contextPath}/streams"
+               aria-current="${navActive == 'streams' ? 'page' : 'false'}">
+                <span class="nav-dot" aria-hidden="true">A</span>Energy streams
+            </a>
+            <a class="nav-link line-b ${navActive == 'zones' ? 'is-active' : ''}"
+               href="${pageContext.request.contextPath}/zones"
+               aria-current="${navActive == 'zones' ? 'page' : 'false'}">
+                <span class="nav-dot" aria-hidden="true">B</span>Smart zones
+            </a>
+            <a class="nav-link line-c ${navActive == 'complaints' ? 'is-active' : ''}"
+               href="${pageContext.request.contextPath}/complaints"
+               aria-current="${navActive == 'complaints' ? 'page' : 'false'}">
+                <span class="nav-dot" aria-hidden="true">C</span>Complaints
+            </a>
+            <a class="nav-link line-d ${navActive == 'streetlights' ? 'is-active' : ''}"
+               href="${pageContext.request.contextPath}/streetlights"
+               aria-current="${navActive == 'streetlights' ? 'page' : 'false'}">
+                <span class="nav-dot" aria-hidden="true">D</span>Street lights
+            </a>
+            <a class="nav-link line-e ${navActive == 'policies' ? 'is-active' : ''}"
+               href="${pageContext.request.contextPath}/policies"
+               aria-current="${navActive == 'policies' ? 'page' : 'false'}">
+                <span class="nav-dot" aria-hidden="true">E</span>Policies
+            </a>
+        </nav>
+
+        <span class="org hidden xl:inline">UrbanTech Solutions</span>
+    </div>
+</header>
